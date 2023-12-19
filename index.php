@@ -2,201 +2,63 @@
 include('header.php');
 //Mengambil data produk dari backend
 include("backend/produk.php");
-
-$faq_items = array_slice($faq_items, 0, 5);
 ?>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
-    <div class="container position-relative">
-      <div class="row gy-5" data-aos="fade-in">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>#<?php echo $hero_data['title']; ?></h2>
-          <p><?php echo $hero_data['description']; ?></p>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="product.php" class="btn-get-started">CEK PAKETNYA DISINI!!</a>
-            <!--a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a-->
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <img src="<?php echo $hero_data['image_url']; ?>" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
-        </div>
-      </div>
+<!-- Your HTML Code -->
+<section id="pricing" class="pricing sections-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>PAKET MEGACLEON 2023</h2>
     </div>
 
-<div class="icon-boxes position-relative">
-      <div class="container position-relative">
-        <div class="row gy-4 mt-5">
-
-        <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-router"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Instalasi Gratis</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-easel"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Tersedia banyak paket</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-clock-fill"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">CS hotline 24 jam</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-command"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Fleksible</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-        </div>
-      </div>
+    <!-- Filter Buttons -->
+    <div class="text-center" id="filter">
+      <a class="filter-btn" href="product.php?filter=semua" data-filter="semua">Semua</a>
+      <a class="filter-btn" href="product.php?filter=Paket1" data-filter="Paket1">30 hari</a>
+      <a class="filter-btn" href="product.php?filter=Paket2" data-filter="Paket2">Mabar terus</a>
+      <a class="filter-btn" href="product.php?filter=Paket3" data-filter="Paket3">Hemat</a>
     </div>
 
-    </div>
-  </section>
-  <!-- End Hero Section -->
-  
-  <main id="main">
 
-
-  <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing sections-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-header">
-        <h2>Rekomendasi</h2>
-        <p>PAKET MEGACLEON 2022</p>
-      </div>
-
-        <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+    <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+      <?php
+      if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              // Ambil data dari database dan masukkan ke dalam template HTML
+              $namaPaket = $row["nama_paket"];
+              $harga = $row["harga"];
+              $masaktiv = $row["masa_aktiv"];
+              $kuota = $row["kuota"];
+              $kecepatan = $row["kecepatan"];
+              $deskripsi = $row["deskripsi"];
+              ?>
+              <div class="col-lg-4">
+                <div class="pricing-item">
+                  <h3><?php echo $namaPaket; ?></h3>
+                  <h4><sup>Rp</sup><?php echo $harga; ?><span> / <?php echo $masaktiv; ?></span></h4>
+                  <ul>
+                    <li><i class="bi bi-globe"></i> <?php echo $kuota; ?></li>
+                    <li><i class="bi bi-speedometer"></i> <?php echo $kecepatan; ?> Mbps</li>
+                    <li><i class="bi bi-calendar2-check"></i> <span> <?php echo $masaktiv; ?></li>
+                    <p><?php echo $deskripsi; ?></p>
+                  </ul>
+                  <div class="text-center"><a href="#" class="buy-btn">Beli Sekarang</a></div>
+                </div>
+              </div>
+              <!-- End Pricing Item -->
           <?php
-          $count = 0; // Menghitung jumlah rekomendasi yang telah ditampilkan
-          if ($result->num_rows > 0) {
-              while($row = $result->fetch_assoc()) {
-                  // Ambil data dari database dan masukkan ke dalam template HTML
-                  $namaPaket = $row["nama_paket"];
-                  $harga = $row["harga"];
-                  $masaAktiv = $row["masa_aktiv"];
-                  $kuota = $row["kuota"];
-                  $kecepatan = $row["kecepatan"];
-                  $deskripsi = $row["deskripsi"];
-                  ?>
-                  <div class="col-lg-4">
-                    <div class="pricing-item">
-                      <h3><?php echo $namaPaket; ?></h3>
-                      <h4><sup>Rp</sup><?php echo $harga; ?><span> / <?php echo $masaAktiv; ?></span></h4>
-                      <ul>
-                        <li><i class="bi bi-globe"></i> <?php echo $kuota; ?></li>
-                        <li><i class="bi bi-speedometer"></i> <?php echo $kecepatan; ?> Mbps</li>
-                        <li><i class="bi bi-calendar2-check"></i> <?php echo $masaAktiv; ?></li>
-                        <p><?php echo $deskripsi; ?></p>
-                      </ul>
-                      <div class="text-center"><a href="#" class="buy-btn">Beli Sekarang</a></div>
-                    </div>
-                  </div><!-- End Pricing Item -->
-                  <?php
-                  $count++;
-                  if ($count >= 3) {
-                      break; // Hentikan loop setelah menampilkan 3 rekomendasi
-                  }
-              }
-          } else {
-              echo "Tidak ada data paket internet.";
           }
-          ?>
-        </div>
+      } else {
+          echo "Tidak ada data paket internet.";
+      }
 
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= Stats Counter Section ======= -->
-    <section id="stats-counter" class="stats-counter">
-      <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Statistik</h2>
-        <p></p>
-      </div>
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6">
-            <img src="assets/img/presentasi.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-6">
-            <?php
-            // Buat query SQL untuk mengambil data statistik dari database
-            $sql = "SELECT * FROM statistik";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-              while ($row = $result->fetch_assoc()) {
-                // Ambil data statistik dari database
-                $happyClients = $row['happy_clients'];
-                $projects = $row['projects'];
-                $hoursOfSupport = $row['hours_of_support'];
-
-                // Tampilkan data statistik dalam elemen HTML
-                echo '<div class="stats-item d-flex align-items-center">';
-                echo '<span data-purecounter-start="0" data-purecounter-end="' . $happyClients . '" data-purecounter-duration="1" class="purecounter"></span>';
-                echo '<p><strong>Happy Clients</strong> ' . $row['happy_clients_description'] . '</p>';
-                echo '</div>';
-
-                echo '<div class="stats-item d-flex align-items-center">';
-                echo '<span data-purecounter-start="0" data-purecounter-end="' . $projects . '" data-purecounter-duration="1" class="purecounter"></span>';
-                echo '<p><strong>Projects</strong> ' . $row['projects_description'] . '</p>';
-                echo '</div>';
-
-                echo '<div class="stats-item d-flex align-items-center">';
-                echo '<span data-purecounter-start="0" data-purecounter-end="' . $hoursOfSupport . '" data-purecounter-duration="1" class="purecounter"></span>';
-                echo '<p><strong>Hours Of Support</strong> ' . $row['hours_of_support_description'] . '</p>';
-                echo '</div>';
-              }
-            }
-            ?>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Stats Counter Section -->
-
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
-        <div class="container" data-aos="fade-up">
-            <div class="row gy-4">
-                <div class="col-lg-4">
-                    <div class="content px-xl-5">
-                        <h3>Frequently Asked <strong>Questions</strong></h3>
-                        <p>Beberapa Daftar Pertanyaan Untuk Cleon</p>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
-                        <?php foreach ($faq_items as $key => $item) { ?>
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-<?php echo $key + 1; ?>">
-                                        <span class="num"><?php echo $key + 1; ?>.</span>
-                                        <?php echo $item['question']; ?>
-                                    </button>
-                                </h3>
-                                <div id="faq-content-<?php echo $key + 1; ?>" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                    <div class="accordion-body">
-                                    <?php echo $item['answer']; ?>
-                                    </div>
-                                </div>
-                            </div><!-- # Faq item-->
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Frequently Asked Questions Section -->
-</main><!-- End #main -->
+      // Tutup koneksi setelah selesai
+      $conn->close();
+      ?>
+    </div>
+  </div>
+</section>
+<!-- End Pricing Section -->
 
 
 <?php
