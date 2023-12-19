@@ -7,19 +7,13 @@
   include("backend/header.php");
   //Mengambil data produk dari backend
   include("backend/produk.php");
-  // Mengambil data testimonial dari backend
-  include("backend/testimonial.php");
-  //Mengambil data TOS dari backend
-  include("backend/TOS.php");
-  //Mengambil data FAQ dari backend
-  include("backend/FAQ.php");
 ?>
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?php echo $title; ?></title>
+  <title>Cleon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -70,24 +64,10 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.php"><?php echo $home; ?></a></li>
           <li><a href="product.php"><?php echo $product; ?></a></li>
-          <li class="dropdown"><a href="#"><span><?php echo $my_cleon; ?></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="about.php">About us</a></li>
-              <!--li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                </ul>
-              </li-->
-              <li><a href="TOS.php">Tos</a></li>
-              <li><a href="FAQ.php">Faq</a></li>
-            </ul>
-          </li>
           <li class="dropdown"><a href="#"><span><?php echo $login; ?></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href=Adminpanel/login_admin.php target="_blank">Login Admin</a></li>
-              <li><a href=# target="_blank">Login User</a></li>
         </ul>
       </nav><!-- .navbar -->
 

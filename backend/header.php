@@ -8,7 +8,6 @@
       if ($result->num_rows > 0) {
           $row = $result->fetch_assoc();
           $icon = $row['icon'];
-          $title = $row['title'];
           $email = $row['email'];
           $kontak = $row['kontak'];
           $twitter = $row['twitter'];
