@@ -2,13 +2,13 @@
 <html>
 <head>
 
-<title>Cleon</title>
+<title>Belajar_CRUD</title>
 <meta content="" name="description">
 <meta content="" name="keywords">
 
   <!-- Favicons -->
-<link href="../assets/img/cleon_icon.png" rel="icon">
-<link href="../assets/img/cleon_icon.png" rel="apple-touch-icon">
+<link href="../assets/img/logoCRUD.png" rel="icon">
+<link href="../assets/img/logoCRUD.png" rel="apple-touch-icon">
 
 <link rel="stylesheet" href="../assets/css/Animation.css">
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -25,7 +25,7 @@
         <div class="login-logo">
                             <center>
                               <br>
-                                <img src="../assets/img/cleon.png" width ="100">
+                                <img src="../assets/img/logoCRUD.png" width ="100">
                               </center>
                         </div>
             <div class="card-body">

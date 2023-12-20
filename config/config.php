@@ -2,7 +2,7 @@
     $servername = "localhost"; // Sesuaikan dengan host database Anda
     $username = "root"; // Sesuaikan dengan username database Anda
     $password = ""; // Sesuaikan dengan password database Anda
-    $dbname = "cleon"; // Sesuaikan dengan nama database Anda
+    $dbname = "belajar_crud"; // Sesuaikan dengan nama database Anda
 
 // Buat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);

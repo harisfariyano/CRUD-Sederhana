@@ -2,13 +2,13 @@
 <html>
 <head>
 
-<title>Cleon</title>
+<title>Belajar_CRUD</title>
 <meta content="" name="description">
 <meta content="" name="keywords">
 
   <!-- Favicons -->
-<link href="../assets/img/logo_cleon.png" rel="icon">
-<link href="../assets/img/logo_cleon.png" rel="apple-touch-icon">
+<link href="../assets/img/logoCRUD.png" rel="icon">
+<link href="../assets/img/logoCRUD.png" rel="apple-touch-icon">
 
 <link rel="stylesheet" href="../assets/css/Animation.css">
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand"> <img src="../assets/img/cleon.png" width ="150">
+            <a class="navbar-brand"> <img src="../assets/img/Belajar_CRUD.png" width ="150">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

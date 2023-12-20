@@ -8,15 +8,15 @@ include("backend/produk.php");
 <section id="pricing" class="pricing sections-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
-      <h2>PAKET MEGACLEON 2023</h2>
+      <h2>Belajar_CRUD 2023</h2>
     </div>
 
     <!-- Filter Buttons -->
     <div class="text-center" id="filter">
-      <a class="filter-btn" href="product.php?filter=semua" data-filter="semua">Semua</a>
-      <a class="filter-btn" href="product.php?filter=Paket1" data-filter="Paket1">30 hari</a>
-      <a class="filter-btn" href="product.php?filter=Paket2" data-filter="Paket2">Mabar terus</a>
-      <a class="filter-btn" href="product.php?filter=Paket3" data-filter="Paket3">Hemat</a>
+      <a class="filter-btn" href="index.php?filter=semua" data-filter="semua">Semua</a>
+      <a class="filter-btn" href="index.php?filter=Paket1" data-filter="Paket1">30 hari</a>
+      <a class="filter-btn" href="index.php?filter=Paket2" data-filter="Paket2">Mabar terus</a>
+      <a class="filter-btn" href="index.php?filter=Paket3" data-filter="Paket3">Hemat</a>
     </div>
 
 

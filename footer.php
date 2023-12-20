@@ -5,46 +5,28 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.php" class="logo d-flex align-items-center">
-            <!--span>Cleon</span-->
-            <img src="assets/img/logo_cleon.png"alt="">
+            <!--span>Belajar_CRUD</span-->
+            <img src="assets/img/logo_Belajar_CRUD.png"alt="">
           </a>
           <p>Alternatif layanan yang memberikan kemudahan bagi pelanggan dalam menikmati layanan internet dimana tidak perlu berlangganan cukup dengan membeli voucher ketika akan menggunakan internet.</p>
           <div class="social-links d-flex mt-4">
-            <a href="<?php echo $twitter; ?>" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="<?php echo $facebook; ?>" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="<?php echo $instagram; ?>" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About us</a></li>
-            <li><a href="FAQ.php">Frequently asked questions</a></li>
-            <li><a href="TOS.php">Terms of service</a></li>
+            <li><a href="#">Home</a></li>
           </ul>
         </div>
 
-        <!--div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div-->
-
         <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>
-            AJl. Sidobali 8 Umbulharjo<br>
-            Yogyakarta <br>
-            Indonesia <br><br>
-            <strong>Phone:</strong> <?php echo $kontak; ?><br>
-            <strong>Email:</strong> <?php echo $email; ?><br>
+            <strong>Phone:</strong> <br>
+            <strong>Email:</strong> <br>
           </p>
 
         </div>
@@ -54,14 +36,15 @@
 
     <div class="container mt-4">
       <div class="copyright">
-        &copy; Copyright <strong><span><?php echo $title; ?></span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Harisfariyano</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href=index.php><?php echo $title; ?></a>
+        Designed by <a href=index.php>Harisfariyano</a>
       </div>
     </div>
 
   </footer><!-- End Footer -->
+
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -79,25 +62,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const filterParam = urlParams.get("filter");
-      
-      // Dapatkan semua tombol filter
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      
-      // Loop melalui setiap tombol filter
-      filterButtons.forEach(button => {
-          // Periksa apakah nilai data-filter pada tombol filter sesuai dengan filterParam
-          if (button.getAttribute('data-filter') === filterParam) {
-              // Jika sesuai, tambahkan kelas 'active' pada tombol tersebut
-              button.classList.add('active');
-          }
-      });
-  });
-  </script>
 
+  <!-- Fier button  -->
+  <script src="assets/js/filterp.js"></script>
 
 </body>
 </html>

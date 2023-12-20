@@ -13,13 +13,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cleon</title>
+  <title>Belajar_CRUD</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo $icon; ?>" rel="icon">
-  <link href="<?php echo $icon; ?>" rel="apple-touch-icon">
+  <link href="assets/img/logoCRUD.png" rel="icon">
+  <link href="assets/img/logoCRUD.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,34 +38,18 @@
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
-  <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-    <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><a href="https://api.whatsapp.com/send/?phone=<?php echo $kontak; ?>&text&type=phone_number&app_absent=0"><?php echo $kontak; ?></a></i>
-    </div>
-    <div class="social-links d-none d-md-flex align-items-center">
-        <a href="<?php echo $twitter; ?>" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="<?php echo $facebook; ?>" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="<?php echo $instagram; ?>" class="instagram"><i class="bi bi-instagram"></i></a>
-    </div>
-    </div>
-  </section><!-- End Top Bar -->
-
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="<?php echo $logo; ?>" alt="">
-        <!--h1>Cleon</h1-->
+        <!--h1>Belajar_CRUD</h1-->
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="product.php"><?php echo $product; ?></a></li>
-          <li class="dropdown"><a href="#"><span><?php echo $login; ?></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a href="index.php">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href=Adminpanel/login_admin.php target="_blank">Login Admin</a></li>
         </ul>
